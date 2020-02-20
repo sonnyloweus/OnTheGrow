@@ -1,0 +1,202 @@
+
+body{
+    background-color: #14d6ac;
+    z-index: -2;
+    color: rgb(165, 159, 159);
+}
+
+.buttons button{
+    color: rgb(131, 128, 128);
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.buttons button:hover{
+    background-color: #169e81; 
+    color: white;
+}
+
+#RegisterButton{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    z-index: 5;
+}
+
+#LoginButton{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -45%);
+    z-index: 5;
+}
+
+#showHide{
+    display:none;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    margin-left: 100px;
+    transform: translate(-50%, -45%);
+    background-color: white;
+    padding:0;
+    width: 27px;
+    height: 20px;
+    font-size: 13px;
+    border-radius: 7px;
+    line-height: 10px;
+}
+
+#showHide:hover{
+    background-color: lightgray;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #cbb09c;
+}
+
+.circleMenu{
+    background-color: #019e7c;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vw;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 75vw;
+    background: white;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@media only screen and (orientation: landscape) {
+    .circle{
+        width: 75vh;
+        height: 75vh;
+    }
+    .circleMenu{
+        width: 90vh;
+        height: 90vh;
+    }
+}
+
+.register{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.memberSystem input{
+    margin-bottom: 6px;
+}
+
+.memberSystem input, select{
+    color: #019e7c;
+    box-shadow: none;
+    outline: none;
+}
+
+.login{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -45%);
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.location{
+    height: 23px;
+    width: 165px;
+}
+
+#submit{
+    color: white;
+    margin-top: 5px;
+    margin-left: 90px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #019e7c;
+    border: 1px solid #019e7c;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.profile{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+}
+
+#signOut{
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50%, 20%);
+    color: rgb(131, 128, 128);
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    transition: 1s;
+}
+
+#signOut:hover{
+    background-color: #169e81; 
+    color: white;
+}
+
+.circleText {
+    position: fixed;
+    margin: 0 auto;
+    font-size: 10px;
+    font-weight: bold;
+}
+.circleText span {
+    position: fixed;
+    top: 20px;
+    right: 5vw;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    transform-origin: bottom center;
+    color: white;
+}
+.circleText span:nth-of-type(7)  {transform: rotate(75deg);}
+.circleText span:nth-of-type(6)  {transform: rotate(50deg);}
+.circleText span:nth-of-type(5)  {transform: rotate(25deg);}
+.circleText span:nth-of-type(4)  {transform: rotate(0deg);}
+.circleText span:nth-of-type(3)  {transform: rotate(-25deg);}
+.circleText span:nth-of-type(2)  {transform: rotate(-50deg);}
+.circleText span:nth-of-type(1)  {transform: rotate(-75deg);}
+
+

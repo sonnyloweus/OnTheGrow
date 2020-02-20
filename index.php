@@ -110,6 +110,3 @@
     </script>
     <script src="index.js"></script>
 </html>
-
-
-hi there
