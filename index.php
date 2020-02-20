@@ -80,10 +80,10 @@
 <!-- ##################### html ################ -->
 <!DOCTYPES html>
 <html>
-    <?php include('templates/header.php'); ?>
     <!-- ##################### content ################ -->
     
     <?php include('templates/menu.php'); ?>
+    <?php include('templates/header.php'); ?>
 
     <!-- ##################### Pages ################# -->
     <?php
@@ -109,4 +109,5 @@
         let loggedIn = "<?php echo "$loggedIn"?>"
     </script>
     <script src="index.js"></script>
+    <script src="transitions.js"></script>
 </html>

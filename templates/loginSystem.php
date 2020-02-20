@@ -1,4 +1,4 @@
-<div class="loginSystem">
+<div id="loginSystem" class="loginSystem">
     <div class="buttons">
         <button id="RegisterButton">Register</button>
         <button id="LoginButton">Login</button>

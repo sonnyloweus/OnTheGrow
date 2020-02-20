@@ -17,8 +17,8 @@ if(!loggedIn){
         register.style.height = "300px";
         regButton.style.display = "none";
         logButton.style.display = "block";
-        logButton.style.top = "71%";
-        showHide.style.top = "41%";
+        logButton.style.top = "67%";
+        showHide.style.top = "46%";
         regOrLog = 1;
     }
 

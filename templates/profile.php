@@ -1,4 +1,4 @@
-<div class="profile">
+<div id="profile" class="profile">
 
     <h1><?php echo $member['username'] ?></h1>
 

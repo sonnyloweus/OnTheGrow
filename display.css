@@ -1,3 +1,10 @@
 .loginSystem {
+    z-index: 3; 
     display: none;
 }
+
+.profile{
+    z-index: 3; 
+    display: none;
+}
+
