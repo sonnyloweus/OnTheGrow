@@ -1,3 +1,4 @@
+//Start ########################## Login System ####################################
 let regButton = document.getElementById("RegisterButton");
 let logButton = document.getElementById("LoginButton");
 let register = document.getElementById("register");
@@ -54,3 +55,4 @@ if(loggedIn){
         window.location.href = "index.php";
     }
 }
+//En\ ########################## Login System ####################################

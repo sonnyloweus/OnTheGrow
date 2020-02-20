@@ -1,6 +1,6 @@
 <div class="menu">
-        <div class = "circleText">
-            <button>
+        <button id="loginProfile"></button>
+            <div class = "circleText1">
                 <span>L</span>
                 <span>O</span>
                 <span>G</span>
@@ -16,8 +16,9 @@
                 <span>I</span>
                 <span>L</span>
                 <span>E</span>
-            </button>
-            <button>
+            </div>
+        <button id="aboutUs"></button>
+            <div class = "circleText2">
                 <span>A</span>
                 <span>B</span>
                 <span>O</span>
@@ -26,19 +27,19 @@
                 <span> </span>
                 <span>U</span>
                 <span>S</span>
-            </button>
-            <button>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-                <span>#</span>
-            </button>
-        </div>
+            </div>
+        <button id="goingGreen"></button>
+            <div class = "circleText3">
+                <span>G</span>
+                <span>O</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+                <span> </span>
+                <span>G</span>
+                <span>R</span>
+                <span>E</span>
+                <span>E</span>
+                <span>N</span>
+            </div>
     </div>

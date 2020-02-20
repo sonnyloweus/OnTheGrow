@@ -1,8 +1,9 @@
-
 body{
     background-color: #14d6ac;
-    z-index: -2;
+    z-index: -5;
     color: rgb(165, 159, 159);
+    min-height: 488px;
+    overflow: hidden;
 }
 
 .buttons button{
@@ -73,8 +74,8 @@ body{
     transform: translate(-50%, -50%);
     width: 90vw;
     height: 90vw;
-    border-radius: 50%;
-    z-index: -1;
+    border-radius: 50vh;
+    z-index: -3;
 }
 
 .circle{
@@ -86,7 +87,25 @@ body{
     height: 75vw;
     background: white;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 1;
+}
+
+
+.circleText1, .circleText2, .circleText3{
+    z-index: -3;
+    position: absolute;
+    left: 49.5%;
+    top: calc(50vh - 42vw);
+    font-size: 4vw;
+}
+.circleText1 span, .circleText2 span, .circleText3 span {
+    position: absolute;
+    width: 2vw;
+    height: 43vw;
+    text-align: center;
+    transform-origin: bottom center;
+    color: rgb(224, 221, 221);
+    transition: 1s;
 }
 
 @media only screen and (orientation: landscape) {
@@ -97,6 +116,122 @@ body{
     .circleMenu{
         width: 90vh;
         height: 90vh;
+    }
+    .circleText1, .circleText2, .circleText3 {
+        top: 7.3%;
+        font-size: 4vh;
+    }
+    .circleText1 span, .circleText2 span, .circleText3 span {
+        width: 2vh;
+        height: 43vh;
+    }
+}
+
+
+.circleText1 span:nth-of-type(1)  {transform: rotate(-120deg);}
+.circleText1 span:nth-of-type(2)  {transform: rotate(-115deg);}
+.circleText1 span:nth-of-type(3)  {transform: rotate(-110deg);}
+.circleText1 span:nth-of-type(4)  {transform: rotate(-105deg);}
+.circleText1 span:nth-of-type(5)  {transform: rotate(-100deg);}
+.circleText1 span:nth-of-type(6)  {transform: rotate(-90deg);}
+.circleText1 span:nth-of-type(7)  {transform: rotate(-85deg);}
+.circleText1 span:nth-of-type(8)  {transform: rotate(-80deg);}
+.circleText1 span:nth-of-type(9)  {transform: rotate(-75deg);}
+.circleText1 span:nth-of-type(10)  {transform: rotate(-70deg);}
+.circleText1 span:nth-of-type(11)  {transform: rotate(-65deg);}
+.circleText1 span:nth-of-type(12)  {transform: rotate(-60deg);}
+.circleText1 span:nth-of-type(13)  {transform: rotate(-55deg);}
+.circleText1 span:nth-of-type(14)  {transform: rotate(-50deg);}
+.circleText1 span:nth-of-type(15)  {transform: rotate(-45deg);}
+
+.circleText2 span:nth-of-type(1)  {transform: rotate(-20deg);}
+.circleText2 span:nth-of-type(2)  {transform: rotate(-15deg);}
+.circleText2 span:nth-of-type(3)  {transform: rotate(-10deg);}
+.circleText2 span:nth-of-type(4)  {transform: rotate(-5deg);}
+.circleText2 span:nth-of-type(5)  {transform: rotate( 0deg);}
+.circleText2 span:nth-of-type(6)  {transform: rotate( 5deg);}
+.circleText2 span:nth-of-type(7)  {transform: rotate( 10deg);}
+.circleText2 span:nth-of-type(8)  {transform: rotate( 15deg);}
+
+.circleText3 span:nth-of-type(1)  {transform: rotate( 45deg);}
+.circleText3 span:nth-of-type(2)  {transform: rotate( 50deg);}
+.circleText3 span:nth-of-type(3)  {transform: rotate( 55deg);}
+.circleText3 span:nth-of-type(4)  {transform: rotate( 60deg);}
+.circleText3 span:nth-of-type(5)  {transform: rotate( 65deg);}
+.circleText3 span:nth-of-type(6)  {transform: rotate( 70deg);}
+.circleText3 span:nth-of-type(7)  {transform: rotate( 75deg);}
+.circleText3 span:nth-of-type(8)  {transform: rotate( 80deg);}
+.circleText3 span:nth-of-type(9)  {transform: rotate( 85deg);}
+.circleText3 span:nth-of-type(10)  {transform: rotate( 90deg);}
+.circleText3 span:nth-of-type(11)  {transform: rotate( 95deg);}
+
+.menu button{
+    border: none;
+    box-shadow: none;
+    background: none;
+    z-index: 0;
+}
+
+#loginProfile:hover ~ .circleText1 span{
+    color: black;
+}
+#aboutUs:hover ~ .circleText2 span{
+    color: black;
+}
+#goingGreen:hover ~ .circleText3 span{
+    color: black;
+}
+
+#loginProfile{
+    position: absolute;
+    top: calc(50vh - 26vw);
+    left: -4vw;
+    transform: rotate(51deg);
+    width: 45vw;
+    height: 45vw;
+    border-bottom-left-radius: 45vw;
+}
+
+#aboutUs{
+    position: absolute;
+    top: calc(50vh - 50.4vw);
+    left: 36vw;
+    transform: rotate(135deg);
+    width: 27vw;
+    height: 27vw;
+    border-bottom-left-radius: 35vw;
+}
+
+#goingGreen{
+    position: absolute;
+    top: calc(50vh - 26.5vw);
+    left: 68vw;
+    transform: rotate(206deg);
+    width: 32vw;
+    height: 32vw;
+    border-bottom-left-radius: 40vw;
+}
+
+@media only screen and (orientation: landscape) {
+    #loginProfile{
+        top: 23.5vh;
+        left: calc(50vw - 53vh);
+        width: 45vh;
+        height: 45vh;
+    }
+    
+    #aboutUs{
+        top: -0.5vh;
+        left: calc(50vw - 15vh);
+        width: 27vh;
+        height: 27vh;
+    }
+    
+    #goingGreen{
+        top: 23vh;
+        left: calc(50vw + 17vh);
+        width: 32vh;
+        height: 32vh;
     }
 }
 
@@ -175,28 +310,5 @@ body{
     color: white;
 }
 
-.circleText {
-    position: fixed;
-    margin: 0 auto;
-    font-size: 10px;
-    font-weight: bold;
-}
-.circleText span {
-    position: fixed;
-    top: 20px;
-    right: 5vw;
-    width: 27px;
-    height: 27px;
-    text-align: center;
-    transform-origin: bottom center;
-    color: white;
-}
-.circleText span:nth-of-type(7)  {transform: rotate(75deg);}
-.circleText span:nth-of-type(6)  {transform: rotate(50deg);}
-.circleText span:nth-of-type(5)  {transform: rotate(25deg);}
-.circleText span:nth-of-type(4)  {transform: rotate(0deg);}
-.circleText span:nth-of-type(3)  {transform: rotate(-25deg);}
-.circleText span:nth-of-type(2)  {transform: rotate(-50deg);}
-.circleText span:nth-of-type(1)  {transform: rotate(-75deg);}
 
 
