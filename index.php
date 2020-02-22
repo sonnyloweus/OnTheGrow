@@ -81,9 +81,9 @@
 <!DOCTYPES html>
 <html>
     <!-- ##################### content ################ -->
-    
     <?php include('templates/menu.php'); ?>
     <?php include('templates/header.php'); ?>
+    
 
     <!-- ##################### Pages ################# -->
     <?php
@@ -94,14 +94,16 @@
         }
     ?>
 
+    <?php include('templates/aboutUs.php') ?>
     
     <!-- ##################### python ################ -->
     <?php 
-        // $python = `index.py`;
-        // echo $python;    
+        $python = `index.py`;
+        echo $python;    
     ?>
 
     <!-- ##################### content ################ -->
+    <button id="homeButton">🏡</button>
     <?php include('templates/footer.php') ?>
     
     <!-- ##################### Js ################ -->

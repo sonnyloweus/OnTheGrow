@@ -11,7 +11,7 @@
 
             <form class="registerForm" action="index.php" methond="GET" autocomplete="off">
                 <label>Username* :</label> <br>
-                <input type="text" name="username" required> <br>
+                <input type="text" name="username" placeholder="Username" required> <br>
                 <label>Password* :</label> <br>
                 <input id="registerPass" type="password" name="password" required> <br>
                 <label>Email* :</label> <br>

@@ -42,4 +42,12 @@
                 <span>E</span>
                 <span>N</span>
             </div>
+        <button id="inbox"></button>
+            <div class = "circleText4">
+                <span>I</span>
+                <span>N</span>
+                <span>B</span>
+                <span>O</span>
+                <span>X</span>
+            </div>
     </div>

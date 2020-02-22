@@ -2,8 +2,10 @@ body{
     background-color: #14d6ac;
     color: rgb(165, 159, 159);
     z-index: -5;
-    min-height: 488px;
+    min-height: 500px;
+    min-width: 500px;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttons button{
@@ -78,7 +80,19 @@ body{
     z-index: -3;
 }
 
-.circleText1, .circleText2, .circleText3{
+.circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 75vw;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.circleText1, .circleText2, .circleText3, .circleText4{
     z-index: -2;
     position: absolute;
     left: 49.5%;
@@ -86,7 +100,7 @@ body{
     font-size: 4vw;
     font-weight: bold;
 }
-.circleText1 span, .circleText2 span, .circleText3 span {
+.circleText1 span, .circleText2 span, .circleText3 span, .circleText4 span {
     position: absolute;
     width: 2vw;
     height: 43vw;
@@ -94,26 +108,6 @@ body{
     transform-origin: bottom center;
     color: rgb(224, 221, 221);
 }
-
-@media only screen and (orientation: landscape) {
-    .circle{
-        width: 75vh;
-        height: 75vh;
-    }
-    .circleMenu{
-        width: 90vh;
-        height: 90vh;
-    }
-    .circleText1, .circleText2, .circleText3 {
-        top: 7.3%;
-        font-size: 4vh;
-    }
-    .circleText1 span, .circleText2 span, .circleText3 span {
-        width: 2vh;
-        height: 43vh;
-    }
-}
-
 
 .circleText1 span:nth-of-type(1)  {transform: rotate(-120deg);}
 .circleText1 span:nth-of-type(2)  {transform: rotate(-115deg);}
@@ -152,6 +146,12 @@ body{
 .circleText3 span:nth-of-type(10)  {transform: rotate( 90deg);}
 .circleText3 span:nth-of-type(11)  {transform: rotate( 95deg);}
 
+.circleText4 span:nth-of-type(1)  {transform: rotate( 115deg);}
+.circleText4 span:nth-of-type(2)  {transform: rotate( 120deg);}
+.circleText4 span:nth-of-type(3)  {transform: rotate( 125deg);}
+.circleText4 span:nth-of-type(4)  {transform: rotate( 130deg);}
+.circleText4 span:nth-of-type(5)  {transform: rotate( 135deg);}
+
 .menu button{
     border: none;
     box-shadow: none;
@@ -172,17 +172,9 @@ body{
     transition: 1s;
     color: black;
 }
-
-.circle{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 75vw;
-    height: 75vw;
-    background: white;
-    border-radius: 50%;
-    z-index: 0;
+#inbox:hover ~ .circleText4 span{
+    transition: 1s;
+    color: black;
 }
 
 #loginProfile{
@@ -215,26 +207,56 @@ body{
     border-bottom-left-radius: 40vw;
 }
 
+#inbox{
+    position: absolute;
+    top: calc(50vh + 14.4vw);
+    left: 71vw;
+    transform: rotate(262deg);
+    width: 20vw;
+    height: 20vw;
+    border-bottom-left-radius: 35vw;
+}
+
 @media only screen and (orientation: landscape) {
+    .circle{
+        width: 75vh;
+        height: 75vh;
+    }
+    .circleMenu{
+        width: 90vh;
+        height: 90vh;
+    }
+    .circleText1, .circleText2, .circleText3, .circleText4 {
+        top: 7.3%;
+        font-size: 4vh;
+    }
+    .circleText1 span, .circleText2 span, .circleText3 span, .circleText4 span {
+        width: 2vh;
+        height: 43vh;
+    }
     #loginProfile{
         top: 23.5vh;
         left: calc(50vw - 53vh);
         width: 45vh;
         height: 45vh;
     }
-    
     #aboutUs{
         top: -0.5vh;
         left: calc(50vw - 15vh);
         width: 27vh;
         height: 27vh;
     }
-    
     #goingGreen{
         top: 23vh;
         left: calc(50vw + 17vh);
         width: 32vh;
         height: 32vh;
+    }
+    #inbox{
+        top: 64vh;
+        left: calc(50vw + 21vh);
+        width: 20vh;
+        height: 20vh;
     }
 }
 
@@ -256,6 +278,11 @@ body{
     color: #019e7c;
     box-shadow: none;
     outline: none;
+}
+
+.loginSystem input::placeholder{
+    color: rgb(243, 233, 233);
+    font-size: 8px;
 }
 
 .login{
@@ -288,16 +315,16 @@ body{
 .profile{
     position: absolute;
     left: 50%;
-    top: 45%;
-    transform: translate(-50%, -55%);
+    top: 38%;
+    transform: translate(-50%, -30%);
     text-align: center;
 }
 
 #signOut{
     position: absolute;
+    margin-top: 15%;
     left: 50%;
-    top: 120%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%);
     color: rgb(131, 128, 128);
     background-color: #14d6ac;
     border: 2px solid #14d6ac;
@@ -306,6 +333,7 @@ body{
     height: 40px;
     font-size: 20px;
     transition: 1s;
+    z-index: 2;
 }
 
 #signOut:hover{
@@ -313,5 +341,59 @@ body{
     color: white;
 }
 
+#homeButton{
+    color: rgb(131, 128, 128);
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 10.5vw;
+    height: 5.2vw;
+    font-size: 2.9vw;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    top: calc(50vh + 38.5vw);
+    transform: translate(-50%);
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+#homeButton:hover{
+    background-color: #169e81; 
+}
+
+.us{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 65vw;
+    height: 65vw;
+    border-radius: 50%;
+    text-align: center;
+    overflow: scroll;
+}
+
+.us::-webkit-scrollbar {
+    display: none;
+  }
+  .us {
+    -ms-overflow-style: none;
+  }
+
+@media only screen and (orientation: landscape){
+    .us{
+        width: 65vh;
+        height: 65vh;
+    }
+    #homeButton{
+        top: calc(50vh + 38.2vh);
+        width: 10.5vh;
+        height: 5.2vh;
+        font-size: 2.9vh;
+    }
+}
 
 

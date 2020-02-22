@@ -4,7 +4,6 @@
 
     <br>
     <br>
-    <br>
 
     <h4> Email: <?php echo $member['email'] ?></h4>
     <h4> Location: <?php echo $member['Location'] ?></h4>
