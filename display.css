@@ -13,3 +13,8 @@
     display: none;
 }
 
+.goingGreenPage{
+    z-index: 3; 
+    display: none;
+}
+

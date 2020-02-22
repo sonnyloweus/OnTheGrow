@@ -57,12 +57,11 @@
                 <span>O</span>
                 <span>X</span>
             </div>
-        <form method="GET">
+        <form method="get">
             <input type="submit" name="leaderboard" value="" id="leaderBoardButton"></input>
             <img id="leaderboardIcon" src="images/leaderboardIcon.png">
 
-
-            <input type="sumbit" name="My Tree" value="" id="myTreeButton"></input>
-            <img id="myTree" src="images/myTree.png">
+            <input type="submit" name="MyTree" value="" id="treeIconButton"></input>
+            <img id="treeIcon" src="images/treeIcon.png">
         </form>
     </div>

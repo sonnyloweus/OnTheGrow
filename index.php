@@ -97,6 +97,10 @@
     ?>
 
     <?php include('templates/aboutUs.php') ?>
+
+    <?php include('templates/home.php') ?>
+
+    <?php include('templates/goingGreen.php') ?>
     
     <!-- ##################### python ################ -->
     <?php 
@@ -112,6 +116,6 @@
     <script type="text/javascript">
         let loggedIn = "<?php echo "$loggedIn"?>"
     </script>
-    <script src="index.js"></script>
-    <script src="transitions.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/transitions.js"></script>
 </html>
