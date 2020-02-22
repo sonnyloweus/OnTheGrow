@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <div id="loginSystem" class="loginSystem">
     <div class="buttons">
         <button id="RegisterButton">Register</button>

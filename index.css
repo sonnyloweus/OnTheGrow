@@ -160,6 +160,35 @@ body{
     outline: none;
 }
 
+#leaderboardIcon{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15vw;
+    height: 15vw;
+}
+
+#leaderboardButton:hover ~ #leaderboardIcon{
+    transition: 1s;
+    background-color: #f7f1f181;
+    border-radius: 50%;
+}
+
+#leaderboardButton{
+    border: none;
+    box-shadow: none;
+    background: none;
+    outline: none;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15vw;
+    height: 15vw;
+}
+
+
 #loginProfile:hover ~ .circleText1 span{
     transition: 1s;
     color: black;

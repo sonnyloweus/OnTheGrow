@@ -1,3 +1,10 @@
+<?php 
+    if (isset($_GET['leaderboard'])) {
+        $python = `index.py`;
+        echo $python; 
+    }
+?>
+
 <div class="menu">
         <button id="loginProfile"></button>
             <div class = "circleText1">
@@ -50,4 +57,12 @@
                 <span>O</span>
                 <span>X</span>
             </div>
+        <form method="GET">
+            <input type="submit" name="leaderboard" value="" id="leaderBoardButton"></input>
+            <img id="leaderboardIcon" src="images/leaderboardIcon.png">
+
+
+            <input type="sumbit" name="My Tree" value="" id="myTreeButton"></input>
+            <img id="myTree" src="images/myTree.png">
+        </form>
     </div>

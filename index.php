@@ -9,7 +9,9 @@
         $email = mysqli_real_escape_string($conn, $_GET['email']);
         $location = mysqli_real_escape_string($conn, $_GET['location']);
 
-        $sql = "SELECT * FROM members WHERE username = '$username'";
+        $testUser = strtolower($username);
+
+        $sql = "SELECT * FROM members WHERE username = '$testUser'";
         //make query + result
         $result = mysqli_query($conn, $sql);
         //fetch array from result
@@ -98,8 +100,8 @@
     
     <!-- ##################### python ################ -->
     <?php 
-        $python = `index.py`;
-        echo $python;    
+        // $python = `index.py`;
+        // echo $python;    
     ?>
 
     <!-- ##################### content ################ -->
