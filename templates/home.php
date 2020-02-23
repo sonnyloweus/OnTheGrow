@@ -31,7 +31,7 @@
             <input type="Start Station" name="Start Station" placeholder="Hyde St." required> <br>
             <label>End Station* :</label> <br>
             <input type="End Station" name="End Station" placeholder="McAllister St." required> <br>
-            <button type="submit" onclick="verifyButton()" id="accountabilitySubmit">Verify</button>
+            <button type="submit" onclick="verifyButton('bus')" id="accountabilitySubmit">Verify</button>
         </form>
     </div>
 
@@ -47,7 +47,7 @@
             <input type="text" name="Time Traveled (min)" placeholder="70 mins" required> <br>
             <label>Electric* :</label> <br>
             <input type="checkbox" name="Electric/Nonelectric" value type="Electric" required> <br>
-            <button type="submit" onclick="verifyButton()" id="accountabilitySubmit">Verify</button>
+            <button type="submit" onclick="verifyButton('car')" id="accountabilitySubmit">Verify</button>
         </form>
     </div>
 
@@ -61,7 +61,7 @@
             <input type="Start Station" name="Start Station" placeholder="Richmond" required> <br>
             <label>End Station* :</label> <br>
             <input type="End Station" name="End Station" placeholder="RockBridge" required> <br>
-            <button type="submit" onclick="verifyButton()" id="accountabilitySubmit">Verify</button>
+            <button type="submit" onclick="verifyButton('tra')" id="accountabilitySubmit">Verify</button>
         </form>
     </div>
 
@@ -75,7 +75,7 @@
             <input type="End Location" name="End Location" required> <br>
             <label>Time of Travel (mins)* :</label> <br>
             <input type="Time of Travel (min)" name="Time of Travel (min)" placeholder="30 mins" required> <br>
-            <button type="submit" onclick="verifyButton()" id="accountabilitySubmit">Verify</button>
+            <button type="submit" onclick="verifyButton('bik')" id="accountabilitySubmit">Verify</button>
         </form>
     </div>
 

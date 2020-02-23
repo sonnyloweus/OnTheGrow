@@ -182,8 +182,8 @@ function verifyButton(type){
     bikeSubmit.style.display = "none";
     verificationSent.style.display = "block";
     forms.reset();
-    let type = "bike";
-    setTimeout(function(){window.location = window.location.href + '&verify=' + type;}, 1000);
+    let activity = type;
+    setTimeout(function(){window.location = window.location.href + '&verify=' + activity;}, 1000);
 }
 
 // #################### Leaderboard Page ####################

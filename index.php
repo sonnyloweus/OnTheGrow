@@ -84,6 +84,7 @@
 <!-- ##################### html ################ -->
 <!DOCTYPES html>
 <html>
+
     <!-- ##################### content ################ -->
     <?php include('templates/menu.php'); ?>
     <?php include('templates/header.php'); ?>
@@ -115,7 +116,12 @@
                 $newScore = $member['points'] + 10;
                 $sql = "UPDATE members SET points='$newScore' WHERE username='$username'";
                 if (mysqli_query($conn, $sql)) {
+                    $theHREF =  $_SERVER['REQUEST_URI'];
+                    $length = strlen($theHREF);
+                    $newHREF = substr($theHREF, 0, $length-11);
+                    echo $theHREF;
                     echo $newScore;
+                    header("Location: ".$newScore);
                 } else {
                     echo "Error updating record: " . mysqli_error($conn);
                 }
