@@ -9,8 +9,6 @@ mydb = mysql.connector.connect(
   database="learn"
 )
 
-print("chickenBut\";")
-
 # '''mycursor.execute("SELECT Location FROM members")
 # for select_city in mycursor.fetchall():
 #     if select_city[0].lower().replace(" ", "_") not in cities:
@@ -79,3 +77,10 @@ print("chickenBut\";")
 # ###username = username
 
 # mycursor.execute("DELETE FROM {tab} where user = {tab2}".format(tab=competition, tab2=username))
+
+#ORDER LEADERBOARDS
+
+###competition = competition to be ordered
+mycursor.execute('SELECT * from {tab} order by points'.format(tab=competition))
+for order in mycursor.fethcall():
+  print(order)

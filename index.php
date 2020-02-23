@@ -1,6 +1,8 @@
 <!-- ##################### PHP ################ -->
 <?php
+
     include('templates/connect_db.php');
+
     $loggedIn = false;
     if(isset($_GET['submitRegister'])){
         //getting data ready for import
@@ -60,7 +62,6 @@
         }
         //free memery of result
         mysqli_free_result($result);
-        
     }
 
 
@@ -103,10 +104,29 @@
 
     <?php include('templates/goingGreen.php') ?>
 
+    <?php include('templates/leaderboard.php') ?>
+
     <?php 
         if(!$loggedIn){
             $points = 0;
         }else{
+            if(isset($_GET['verify'])){
+                include('templates/connect_db.php');
+                $newScore = $member['points'] + 10;
+                $sql = "UPDATE members SET points='$newScore' WHERE username='$username'";
+                if (mysqli_query($conn, $sql)) {
+                    echo $newScore;
+                } else {
+                    echo "Error updating record: " . mysqli_error($conn);
+                }
+            }
+            include('templates/connect_db.php');
+            $sql = "SELECT * FROM members WHERE username = '$username'";
+            //make query + result
+            $result = mysqli_query($conn, $sql);
+            //fetch array from result
+            $member = mysqli_fetch_assoc($result);
+
             $points = $member['points']; 
         }
     ?> 

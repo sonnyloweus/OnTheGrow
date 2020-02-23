@@ -12,6 +12,5 @@
     
     <p>Our website On The Grow is offers a progressive and <br>engaging solution to climate change, by addressing the <br>source cause of transportation and CO2 emissions.
     </p>
-    
 
 </div>

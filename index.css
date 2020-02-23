@@ -426,8 +426,8 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 65vw;
-    height: 65vw;
+    width: 67vw;
+    height: 67vw;
     border-radius: 50%;
     text-align: center;
     overflow: scroll;
@@ -435,10 +435,10 @@ body{
 
 .us::-webkit-scrollbar {
     display: none;
-  }
-  .us {
+}
+.us {
     -ms-overflow-style: none;
-  }
+}
 
 .home{
     position: absolute;
@@ -459,13 +459,22 @@ body{
     width: 67vw;
     height: 67vw;
     border-radius: 50%;
+    overflow: scroll;
     text-align: center;
+    padding: 20px;
+}
+
+.goingGreenPage::-webkit-scrollbar {
+    display: none;
+}
+.goingGreenPage {
+    -ms-overflow-style: none;
 }
 
 @media only screen and (orientation: landscape){
     .us{
-        width: 65vh;
-        height: 65vh;
+        width: 67vh;
+        height: 67vh;
     }
     #homeButton{
         top: calc(50vh + 38.2vh);
@@ -499,7 +508,7 @@ body{
     transform: translate(-50%, -75%);
     color:  #14d6ac;
     font-size: 50vw;
-    opacity: 0.4;
+    opacity: 0.2;
 }
 
 @media only screen and (orientation: landscape){
@@ -549,10 +558,10 @@ body{
 #train, #trainIcon{
     position: absolute;
     left: 30%;
-    top: 70%;
-    transform: translate(-70%, -30%);
+    top: 74%;
+    transform: translate(-70%, -26%);
     width: 20vw;
-    height: 13vw;
+    height: 10vw;
 }
 
 #bike, #bikeIcon{
@@ -577,7 +586,7 @@ body{
     
     #train, #trainIcon{
         width: 20vh;
-        height: 13vh;
+        height: 10vh;
     }
     
     #bike, #bikeIcon{
@@ -589,18 +598,18 @@ body{
 
 #accountabilitySubmit{
     color: white;
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 12.5vw;
+    height: 5.2vw;
+    font-size: 2vw;
+    transition: 1s;
     position: absolute;
     left: 50%;
-    top: 70%;
-    transform: translate(-50%, -30%);
-    padding: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 15px;
-    background-color: #019e7c;
-    border: 1px solid #019e7c;
-    border-radius: 25px;
-    text-align: center;
+    top: calc(50vh + 5.5vw);
+    transform: translate(-50%);
+    transition: 1s;
 }
 
 #accountabilitySubmit:hover{
@@ -609,10 +618,54 @@ body{
     transition: 1s;
 }
 
-#submitForm input{
-    margin: 50px;
+#submitForm {
+    z-index: 3;
 }
 
+#carSubmit label, #busSubmit label, #trainSubmit label, #bikeSubmit label{
+    font-size: 2vh;
+}
 
+#carSubmit input, #busSubmit input, #trainSubmit input, #bikeSubmit input{
+    margin: 7px;
+    resize: vertical;
+    height: 4vh;
+    resize: horizontal;
+    width: 25vh;
+    border: 1px solid #05775e;
+    padding: 2px;
+    margin: 10px;
+}
 
+#carSubmit input::placeholder, #busSubmit input::placeholder, #trainSubmit input::placeholder, #bikeSubmit input::placeholder{
+    color: lightgray;
+}
 
+#verificationSent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #06b690;
+    display: none;
+}
+
+@media only screen and (orientation: landscape){
+    #accountabilitySubmit{
+        top: calc(50vh + 12.2vh);
+        width: 10.5vh;
+        height: 5.2vh;
+        font-size: 2vh;
+    }
+    #carSubmit label, #busSubmit label, #trainSubmit label, #bikeSubmit label{
+        font-size: 2vw;
+    }
+    
+    #carSubmit input, #busSubmit input, #trainSubmit input, #bikeSubmit input{
+        resize: vertical;
+        height: 2.4vw;
+        resize: horizontal;
+        width: 17vw;
+    }
+    
+}

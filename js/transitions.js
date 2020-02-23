@@ -23,9 +23,15 @@ homeButton.onclick = function(){
         goingGreenPage.style.display = "none";
         currentGreen = false;
     }
+    plusSign.style.display = "block";
+    mainTitle.style.display = "block"; 
     home.style.display = "block";
     activityButtons.style.display = "block";
-    submitForm.style.display = "none";
+    carSubmit.style.display = "none";
+    busSubmit.style.display = "none";
+    trainSubmit.style.display = "none";
+    bikeSubmit.style.display = "none";
+    verificationSent.style.display = "none";
     homeButton.style.visibility = "hidden";
     homeButton.style.opacity = "0";
 }
@@ -116,48 +122,68 @@ let busButton = document.getElementById("bus");
 let bikeButton = document.getElementById("bike");
 let trainButton = document.getElementById("train");
 let activityType = document.getElementById("activityType");
-let submitForm = document.getElementById("submitForm");
+let carSubmit = document.getElementById("carSubmit");
+let busSubmit = document.getElementById("busSubmit");
+let trainSubmit = document.getElementById("trainSubmit");
+let bikeSubmit = document.getElementById("bikeSubmit");
 let homeForm = document.getElementById("homeForm");
+let mainTitle = document.getElementById("mainTitle");
+let plusSign = document.getElementById("plusSign");
+let verificationSent = document.getElementById("verificationSent");
 
 //homeForm.action = window.location.href;
 
 carpoolButton.onclick = function(){
     activityButtons.style.display = "none";
-    submitForm.style.display = "block";
+    carSubmit.style.display = "block";
     activityType.innerHTML = "Carpool";
     homeButton.style.visibility = "visible";
     homeButton.style.opacity = "1";  
+    plusSign.style.display = "none";
+    mainTitle.style.display = "none";
 }
 busButton.onclick = function(){
     activityButtons.style.display = "none";
-    submitForm.style.display = "block";
+    busSubmit.style.display = "block";
     activityType.innerHTML = "Bus";
     homeButton.style.visibility = "visible";
     homeButton.style.opacity = "1";  
+    plusSign.style.display = "none";
+    mainTitle.style.display = "none";
 }
 trainButton.onclick = function(){
     activityButtons.style.display = "none";
-    submitForm.style.display = "block";
+    trainSubmit.style.display = "block";
     activityType.innerHTML = "Train";
     homeButton.style.visibility = "visible";
     homeButton.style.opacity = "1";  
+    plusSign.style.display = "none";
+    mainTitle.style.display = "none";
 }
 bikeButton.onclick = function(){
     activityButtons.style.display = "none";
-    submitForm.style.display = "block";
+    bikeSubmit.style.display = "block";
     activityType.innerHTML = "Bike";
     homeButton.style.visibility = "visible";
-    homeButton.style.opacity = "1";  
+    homeButton.style.opacity = "1"; 
+    plusSign.style.display = "none";
+    mainTitle.style.display = "none"; 
 }
 
 let submitButton = document.getElementById("accountabilitySubmit");
 let accountability = document.getElementById("accountability");
 let userImage = document.getElementById("userImage");
+let forms = document.getElementById("verify");
 
-submitButton.onclick = function(){
-    let image = accountability.value;
-    console.log(image);
-    userImage.src = image;
+function verifyButton(type){
+    carSubmit.style.display = "none";
+    busSubmit.style.display = "none";
+    trainSubmit.style.display = "none";
+    bikeSubmit.style.display = "none";
+    verificationSent.style.display = "block";
+    forms.reset();
+    let type = "bike";
+    setTimeout(function(){window.location = window.location.href + '&verify=' + type;}, 1000);
 }
 
 // #################### Leaderboard Page ####################
