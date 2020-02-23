@@ -1,5 +1,9 @@
 <div id="goingGreenPage" class="goingGreenPage">
 
+    <br>
+    <br>
+    <br>
+
     <h1>Going Green</h1>
 
     <h3> Why? </h3>
@@ -20,6 +24,11 @@
        per year consistently for many years! You can help this organization today by using our 
        website.</p>
     
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
        <br>
        <br>
        <br>
