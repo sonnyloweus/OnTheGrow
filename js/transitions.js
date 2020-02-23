@@ -192,6 +192,8 @@ let leaderboard = document.getElementById("leaderboard")
 
 leaderBoardButton.onclick = function(){
     leaderboard.style.display = "block";
+    leaderboard.style.width = "100px";
+    leaderboard.style.height = "100px";
 }
 
     

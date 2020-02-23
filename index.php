@@ -85,6 +85,7 @@
 <!DOCTYPES html>
 <html>
 
+
     <!-- ##################### content ################ -->
     <?php include('templates/menu.php'); ?>
     <?php include('templates/header.php'); ?>
@@ -119,9 +120,7 @@
                     $theHREF =  $_SERVER['REQUEST_URI'];
                     $length = strlen($theHREF);
                     $newHREF = substr($theHREF, 0, $length-11);
-                    echo $theHREF;
-                    echo $newScore;
-                    header("Location: ".$newScore);
+                    echo "<script> window.location = '$newHREF ';</script>";
                 } else {
                     echo "Error updating record: " . mysqli_error($conn);
                 }
@@ -153,6 +152,7 @@
 
     <script>
         let loggedIn = "<?php echo "$loggedIn"?>";
+        
     </script>
 
     <script src="js/index.js"></script>
