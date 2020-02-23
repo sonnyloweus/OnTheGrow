@@ -61,8 +61,6 @@
         //free memery of result
         mysqli_free_result($result);
         
-        $spl = "UPDATE members SET points='10' WHERE username = '$username'";
-        mysqli_query($conn, $sql);
     }
 
 

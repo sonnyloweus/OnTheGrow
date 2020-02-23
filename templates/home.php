@@ -20,15 +20,21 @@
 
     <div id="submitForm" style="display:none">
         <h1 id="activityType"></h1>
-        <input type="file" name="img" id="accountability" accept="image/*">
-        <button id="accountabilitySubmit">Submit</button>
-        <img id="userImage" src="">
+        <form>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <label>Username* :</label> <br>
+            <input type="text" name="username" placeholder="Username" required> <br>
+            <button id="accountabilitySubmit">Submit</button>
+        </form>
     </div>
 
 </div>
-
-
-
-<script>
-
-</script>

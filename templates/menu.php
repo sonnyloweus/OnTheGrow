@@ -62,9 +62,9 @@
     </div>
 
     <script>
-        let leaderBoardButton = document.getElementById("leaderBoardButton")''
-        leaderBoardButton.onclick(){
-            let pythonCode = "<?php $python = `index.py`; echo $python; ?>
-            console.log(pythonCode);
-        }
+        // let leaderBoardButton = document.getElementById("leaderBoardButton");
+        // leaderBoardButton.onclick = function(){
+        //     let pythonCode = "<?php $python = `index.py`; echo $python; ?>
+        //     console.log(pythonCode);
+        // }
     </script>

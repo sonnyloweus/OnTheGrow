@@ -587,29 +587,12 @@ body{
     
 }
 
-#accountability{
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -70%);
-    background-color: #07caa0;
-    border: 1px solid #019e7c;
-    border-radius: 50px;
-    color: rgb(185, 175, 175);
-    box-shadow: none;
-    outline: #036d56;
-    padding: 10px;
-    color: rgb(165, 159, 159);
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 #accountabilitySubmit{
     color: white;
     position: absolute;
     left: 50%;
-    top: 40%;
-    transform: translate(-50%, -60%);
+    top: 70%;
+    transform: translate(-50%, -30%);
     padding: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -624,6 +607,10 @@ body{
     background-color: #05775e;
     border: 1px solid #06b690;
     transition: 1s;
+}
+
+#submitForm input{
+    margin: 50px;
 }
 
 

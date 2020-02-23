@@ -160,7 +160,7 @@ submitButton.onclick = function(){
     userImage.src = image;
 }
 
-//#################### Leaderboard Page ####################
+// #################### Leaderboard Page ####################
 let leaderBoardButton = document.getElementById("leaderBoardButton");
 let leaderboard = document.getElementById("leaderboard")
 
