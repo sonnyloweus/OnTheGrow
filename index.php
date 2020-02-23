@@ -108,6 +108,8 @@
 
     <?php include('templates/leaderboard.php') ?>
 
+    <?php include('templates/inbox.php') ?>
+
     <?php 
         if(!$loggedIn){
             $points = 0;
@@ -134,9 +136,10 @@
 
             $points = $member['points']; 
         }
+        
     ?> 
 
-    <h5> Points: <?php echo $points ?> </h5>
+    <!-- <h5> Points:</h5> -->
     
     <!-- ##################### python ################ -->
     <?php 

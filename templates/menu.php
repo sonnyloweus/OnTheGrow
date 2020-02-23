@@ -60,11 +60,3 @@
         <button id="treeIconButton"></button>
         <img id="treeIcon" src="images/treeIcon.png">
     </div>
-
-    <script>
-        // let leaderBoardButton = document.getElementById("leaderBoardButton");
-        // leaderBoardButton.onclick = function(){
-        //     let pythonCode = "<?php $python = `index.py`; echo $python; ?>
-        //     console.log(pythonCode);
-        // }
-    </script>

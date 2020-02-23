@@ -1,6 +1,7 @@
 let currentLogin = false;
 let currentAbout = false;
 let currentGreen = false;
+let currentInbox = false;
 //#################### Home Page ######################
 let home = document.getElementById("home");
 
@@ -23,6 +24,11 @@ homeButton.onclick = function(){
         goingGreenPage.style.display = "none";
         currentGreen = false;
     }
+    if(currentInbox) {
+        inboxPage.style.display = "none";
+        currentInbox = false;
+    }
+
     plusSign.style.display = "block";
     mainTitle.style.display = "block"; 
     home.style.display = "block";
@@ -57,6 +63,10 @@ loginProfile.onclick = function(){
         goingGreenPage.style.display = "none";
         currentGreen = false;
     }
+    if(currentInbox) {
+        inboxPage.style.display = "none";
+        currentInbox = false;
+    }
 
     homeButton.style.visibility = "visible";
     homeButton.style.opacity = "1"; 
@@ -81,6 +91,11 @@ aboutUsButton.onclick = function(){
         goingGreenPage.style.display = "none";
         currentGreen = false;
     }
+
+    if(currentInbox) {
+        inboxPage.style.display = "none";
+        currentInbox = false;
+    }
     aboutUs.style.display = "block";
 
     homeButton.style.visibility = "visible";
@@ -95,6 +110,7 @@ let goingGreenPage = document.getElementById("goingGreenPage");
 goingGreenButton.onclick = function(){
     home.style.display = "none";
     currentGreen = true;
+
     if(currentLogin){
         if(loggedIn == false){
             loginSystem.style.display = "none";
@@ -107,11 +123,46 @@ goingGreenButton.onclick = function(){
         aboutUs.style.display = "none";
         currentAbout = false;
     }
+    if(currentInbox){
+        inboxPage.style.display = "none";
+        currentInbox = false;
+    }
 
     goingGreenPage.style.display = "block";
 
     homeButton.style.visibility = "visible";
-    homeButton.style.opacity = "1";   
+    homeButton.style.opacity = "1";  
+}
+
+//#################### Inbox ####################
+let inboxButton = document.getElementById("inbox");
+let inboxPage = document.getElementById("inboxPage");
+
+inboxButton.onclick = function() {
+    home.style.display = "none";
+    currentInbox = true;
+    if(currentLogin) {
+        if(loggedIn == false) {
+            loginSystem.style.display = "none";
+        } else{
+            profile.style.display = "none";
+        }
+        currentLogin = false;
+    }
+    if(currentAbout){
+        aboutUs.style.display = "none";
+        currentAbout = false;
+    }
+
+    if(currentGreen){
+        goingGreenPage.style.display = "none";
+        currentGreen = false;
+    }
+
+    inboxPage.style.display = "block";
+
+    homeButton.style.visibility = "visible";
+    homeButton.style.opacity = "1"; 
 }
 
 //#################### Home Page ####################
@@ -189,11 +240,21 @@ function verifyButton(type){
 // #################### Leaderboard Page ####################
 let leaderBoardButton = document.getElementById("leaderBoardButton");
 let leaderboard = document.getElementById("leaderboard")
+let leaderboardPage = document.getElementById("leaderboardPage");
 
 leaderBoardButton.onclick = function(){
     leaderboard.style.display = "block";
-    leaderboard.style.width = "100px";
-    leaderboard.style.height = "100px";
+    leaderboardPage.style.visibility = "visible";
+    leaderboardPage.style.opacity = "1";
 }
 
-    
+let homeButton2 = document.getElementById("homeButton2");
+
+homeButton2.onclick = function(){
+    location.reload();
+    console.log("hi");
+}
+
+leaderBoardButton.onclick = function() {
+
+}
