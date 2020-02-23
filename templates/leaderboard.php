@@ -30,38 +30,37 @@
   
     <div id="myCompetitions" style="display: none;">
 
-      <!-- <?php 
-        $test = "title:bob,sam,joe";
+      <?php 
         $titleComp = "";
         $userComp = array("","","","","");
 
         $counter1 = 0;
         $counter2 = 0;
         $indextitle = 0; 
-        for($i = 0; $i < strlen($test); $i++){
-          if($test[$i] == ":"){
+        for($i = 0; $i < strlen($python); $i++){
+          if($python[$i] == ":"){
             $counter1++;
           }
           if($counter1 == 1){
-          }else if($counter1 != 1){
-            $titleComp = $titleComp . $test[$i];
-          }else{
-            if($test[$i] == ","){
+            if($python[$i] == ","){
               $counter2++;
-            }else{
-              $userComp[$counter2] = $userComp[$counter2] . $test[$i];
+            }else if($python[$i] != ":"){
+              $userComp[$counter2] = $userComp[$counter2] . $python[$i];
             }
+          }else if($counter1 != 1){
+            $titleComp = $titleComp . $python[$i];
           }
+          
         }
 
         echo '<h1 id="titleComp">'. $titleComp .'</h1>';
         echo '<div id="userComp">';
         for($i = 0; $i < sizeof($userComp); $i++){
-          echo '<h3>'. $userComp[$i] .' </h3>';
+          echo '<h3>'. $userComp[$i] .'</h3>';
         }
-        echo '<div>';
+        echo '</div>';
       
-      ?> -->
+      ?>
     
     </div>
     

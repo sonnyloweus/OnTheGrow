@@ -91,8 +91,6 @@
     mysqli_close($conn);
 
     //print_r($members);
-
-    $python =  `publicCompetition.py`
 ?>
 
 
@@ -118,8 +116,6 @@
     <?php include('templates/aboutUs.php') ?>
 
     <?php include('templates/home.php') ?>
-
-    <?php include('templates/leaderboard.php') ?>
 
     <?php include('templates/goingGreen.php') ?>
 
@@ -154,9 +150,6 @@
                     echo "Error updating record: " . mysqli_error($conn);
                 }
 
-
-                $python =  `publicCompetition.py`;
-                
             }
 
             include('templates/connect_db.php');
@@ -167,6 +160,9 @@
             $member = mysqli_fetch_assoc($result);
 
             $points = $member['points']; 
+
+
+            $python =  `publicCompetition.py`;
         }
 
 
@@ -221,9 +217,6 @@
             } else {
             }
 
-            $python = `addCompetition.py`;
-            echo $python;
-
             //######################################
 
             // if(isset($_GET['created'])){
@@ -235,6 +228,9 @@
 
         
     ?> 
+
+    <?php include('templates/leaderboard.php') ?>
+
 
     <!-- <h5> Points:</h5> -->
     
