@@ -91,6 +91,8 @@
     mysqli_close($conn);
 
     //print_r($members);
+
+    $python =  `publicCompetition.py`
 ?>
 
 
@@ -117,11 +119,13 @@
 
     <?php include('templates/home.php') ?>
 
-    <?php include('templates/goingGreen.php') ?>
-
     <?php include('templates/leaderboard.php') ?>
 
+    <?php include('templates/goingGreen.php') ?>
+
     <?php include('templates/inbox.php') ?>
+
+    <?php include('templates/myForest.php') ?>
 
     <?php 
         if(!$loggedIn){
@@ -149,14 +153,10 @@
                 } else {
                     echo "Error updating record: " . mysqli_error($conn);
                 }
-            }
-            if(isset($_GET['created'])){
-                include('templates/connect_db.php');
-                $sql = "UPDATE members SET competition1='' WHERE username='$username'";
+
+
+                $python =  `publicCompetition.py`;
                 
-                if (mysqli_query($conn, $sql)) {
-                } else {
-                }
             }
 
             include('templates/connect_db.php');
@@ -168,6 +168,71 @@
 
             $points = $member['points']; 
         }
+
+
+        if(isset($_GET['created'])){
+    
+            $theHREF =  $_SERVER['REQUEST_URI'];
+            $counter = 0;
+            $index = 0;
+            for ($i = 0; $i < strlen($theHREF); $i++){
+                if($theHREF[$i] == "&"){
+                    $counter++;
+                }
+                if($counter == 1){
+                    $index = $i;
+                    break;
+                }
+            }
+            $index = $index-26;
+            $theName = substr($theHREF, 26, $index);
+
+            $doneName = "";
+
+            for ($i = 0; $i < strlen($theName); $i++){
+                if($theName[$i] == "+"){
+                    $doneName = $doneName . " ";
+                }else{
+                    $doneName = $doneName . $theName[$i];
+                }
+            }
+            
+
+            include('templates/connect_db.php');
+            $competition = mysqli_real_escape_string($conn, $_GET['created']);
+
+            $sql = "UPDATE members SET newSubmition='$competition' WHERE username='$doneName'";
+            if (mysqli_query($conn, $sql)) {
+                $theHREF =  $_SERVER['REQUEST_URI'];
+                $counter = 0;
+                $index = 0;
+                for ($i = 0; $i < strlen($theHREF); $i++){
+                    if($theHREF[$i] == "&"){
+                        $counter++;
+                    }
+                    if($counter == 3){
+                        $index = $i;
+                        break;
+                    }
+                }
+
+                $newHREF = substr($theHREF, 0, $index);
+                echo "<script> window.location = '$newHREF ';</script>";
+            } else {
+            }
+
+            $python = `addCompetition.py`;
+            echo $python;
+
+            //######################################
+
+            // if(isset($_GET['created'])){
+            //     // $python = `publicCompetition.py`;
+            //     echo 
+            // }
+        }
+
+
         
     ?> 
 

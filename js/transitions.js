@@ -252,27 +252,61 @@ let homeButton2 = document.getElementById("homeButton2");
 
 homeButton2.onclick = function(){
     location.reload();
-    console.log("hi");
 }
 
+let addCompetitionsButton = document.getElementById("addCompetitionsButton")
+let ViewCompetitionsButton = document.getElementById("ViewCompetitionsButton");
+let createAnother = document.getElementById("createAnother")
+let myCompetitions = document.getElementById("myCompetitions");
+
+addCompetitionsButton.onclick = function() {
+    createAnother.style.display="block";
+    myCompetitions.style.display = "none";
+}
+
+
+ViewCompetitionsButton.onclick = function(){
+    myCompetitions.style.display = "block";
+    createAnother.style.display="none";
+}
+
+
 //######################### Create Competition ##################
-let competitionName = document.getElementById("leaderBoardButton");
-let peopleCompetition = document.getElementById("leaderboard");
 let addingSubmit = document.getElementById("addingSubmit");
 
 let adding = document.getElementById("adding");
 let created = document.getElementById("created");
 let anotherOne = document.getElementById("anotherOne");
 
-function createCompetition(){
+function createCompetition(type){
+    let competitionName = document.getElementById("competitionName").value;
+    let peopleCompetition = document.getElementById("peopleCompetition").value;
     adding.style.display = "none";
     created.style.display="block";
     anotherOne.style.display="block";
-    setTimeout(function(){window.location = window.location.href + '&created=true';}, 1000);
+    adding.reset();
+    setTimeout(function(){window.location = window.location.href + '&created=' + competitionName + ":" + peopleCompetition;}, 2000);
 }
 
 anotherOne.onclick = function(){
     adding.style.display = "block";
     created.style.display="none";
     anotherOne.style.display="none";
+}
+
+//################################## My Forest Page #######################################################
+let myForestButton = document.getElementById("treeIconButton");
+let myForest = document.getElementById("myForest")
+let myForestPage = document.getElementById("myForestPage");
+
+myForestButton.onclick = function(){
+    myForest.style.display = "block";
+    myForestPage.style.visibility = "visible";
+    myForestPage.style.opacity = "1";
+}
+
+let homeButton3 = document.getElementById("homeButton3");
+
+homeButton3.onclick = function(){
+    location.reload();
 }

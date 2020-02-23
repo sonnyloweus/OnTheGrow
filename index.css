@@ -211,7 +211,7 @@ body{
     z-index: 1;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 16vw;
     height: 15vw;
 }
@@ -561,7 +561,7 @@ body{
     top: 74%;
     transform: translate(-70%, -26%);
     width: 20vw;
-    height: 10vw;
+    height: 13vw;
 }
 
 #bike, #bikeIcon{
@@ -586,7 +586,7 @@ body{
     
     #train, #trainIcon{
         width: 20vh;
-        height: 10vh;
+        height: 13vh;
     }
     
     #bike, #bikeIcon{
@@ -846,4 +846,53 @@ body{
     background-color: #05775e;
     border: 1px solid #06b690;
     transition: 1s;
+}
+
+/* ############################################### My Forest #########################################*/
+#myForestPage{
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: 1s;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    border-top-left-radius: 20%;
+    color: lightgray;
+    background-color:#069e7d;
+    margin:0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#homeButton3{
+    color: rgb(131, 128, 128);
+    background: none;
+    border: none;
+    border-radius: 15px;
+    width: 5.2vw;
+    height: 5.2vw;
+    font-size: 2.9vw;
+    transition: 1s;
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 5px;;
+}
+
+#homeButton3:hover{
+    font-size: 4vw;
+}
+
+#titleComp {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#userComp {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
 }

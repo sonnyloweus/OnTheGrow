@@ -22,9 +22,9 @@
                 <select class="location" type="text" name="location" required>
                     <option value="" disabled selected>--- Choose ---</option>
                     <option value="Cupertino">Cupertino</option>
-                    <option value="San_Jose">San Jose</option>
-                    <option value="San_Francisco">San Francisco</option>
-                    <option value="Palo_Alto">Palo Alto</option>
+                    <option value="SanJose">San Jose</option>
+                    <option value="SanFrancisco">San Francisco</option>
+                    <option value="PaloAlto">Palo Alto</option>
                     <option value="Fremont">Fremont</option>
                 </select> <br>
                 <input id="submit" type="submit" name="submitRegister" value="submit">
