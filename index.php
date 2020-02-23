@@ -1,5 +1,10 @@
 <!-- ##################### PHP ################ -->
 <?php
+    include('templates/connect_db.php');
+    $sql = "TRUNCATE TABLE currentUser";
+    if (mysqli_query($conn, $sql)) {
+    } else {
+    }
 
     include('templates/connect_db.php');
 
@@ -33,9 +38,17 @@
                 //fetch array from result
                 $member = mysqli_fetch_assoc($result);
                 $loggedIn = true;
+
+                $pointCount = $member['points'];
+                $sql = "INSERT INTO $location(username, points) VALUES('$username', '$pointCount')";
+                if(mysqli_query($conn, $sql)){
+                }else{
+                }
+
             }else{
                 echo 'query error';
             }
+
         }
     }
 
@@ -55,7 +68,7 @@
         }else{
             if($member['password'] == $password){
                 $loggedIn = true;
-                echo 'Successfully logged in as ' . $username;
+                //echo 'Successfully logged in as ' . $username;
             }else{
                 echo 'Your password or username is incorrect';
             }
@@ -112,8 +125,18 @@
 
     <?php 
         if(!$loggedIn){
+            include('templates/connect_db.php');
+            $sql = "TRUNCATE TABLE currentUser";
+            if (mysqli_query($conn, $sql)) {
+            } else {
+            }
             $points = 0;
         }else{
+            include('templates/connect_db.php');
+            $sql = "INSERT INTO currentUser(username) VALUES('$username')";
+            if(mysqli_query($conn, $sql)){
+            }else{
+            }
             if(isset($_GET['verify'])){
                 include('templates/connect_db.php');
                 $newScore = $member['points'] + 10;

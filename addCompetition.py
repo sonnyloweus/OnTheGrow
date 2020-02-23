@@ -8,9 +8,32 @@ mydb = mysql.connector.connect(
   passwd="Igacgecko@2k19",
   database="learn"
 )
-
+found = False
+chosen_column = None
 mycursor = mydb.cursor()
 
+mycursor.execute('SELECT username from currentUser')
+username = mycursor.fetchall()
 
-city = mycursor.execute("SELECT Location FROM members where username = {tab}".format(tab = user[0].lower().replace(" ", "_")))[0].lower().replace(" ", "_")
-mycursor.execute('INSERT INTO competitions ({tab}, {tab2}, "private")'.format(tab = competition_name[0].lower().replace(" ", "_"), tab2 = city))
+print(username)
+
+mycursor.execute('SELECT competition1 from members where username={tab}'.format(tab=username))
+competition1 = mycursor.fetchall()
+mycursor.execute('SELECT competition2 from members where username={tab}'.format(tab=username))
+competition2 = mycursor.fetchall()
+mycursor.execute('SELECT competition3 from members where username={tab}'.format(tab=username))
+competition3 = mycursor.fetchall()
+print(competition1)
+print(competition2)
+print(competition3)
+
+competition_list = [competition1_value, competition2_value, competition3_value]
+for item in competition_list:
+  if item=="":
+    found = True
+    chosen_column = item
+    break
+  else:
+    continue
+if found==True:
+  mycursor.execute('INSERT INTO ')

@@ -254,7 +254,3 @@ homeButton2.onclick = function(){
     location.reload();
     console.log("hi");
 }
-
-leaderBoardButton.onclick = function() {
-
-}

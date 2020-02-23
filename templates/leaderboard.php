@@ -1,5 +1,4 @@
--$_POST|<div id="leaderboard" class="leaderboard">
-
+<div id="leaderboard" class="leaderboard">
   <div id="leaderboardPage">
     
     <button id="homeButton2" class="homeButton2">🏡</button>
@@ -13,14 +12,16 @@
 
     </div>
   
-  </div>
+    <form id="adding"  autocomplete="off">
+      <label>Name of Competition* :</label> <br>
+      <input type="Name of Competition" name="Name of Competiton" placeholder="Family" required> <br>
+      <label>Users*  (separate with a comma and space):</label> <br>
+      <input type="Users" name="Users" placeholder="bob, sam, tim" required> <br>
+    </form>
 
+
+  </div>
 </div>
 
 <script>
-  // let leaderBoardButton = document.getElementById("leaderBoardButton");
-  // leaderBoardButton.onclick = function(){
-  //     let pythonCode = "<?php $python = `index.py`; echo $python; ?>
-  //     console.log(pythonCode);
-  // }
 </script>
