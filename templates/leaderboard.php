@@ -53,12 +53,16 @@
           
         }
 
+        echo '<div id="competition">';
         echo '<h1 id="titleComp">'. $titleComp .'</h1>';
         echo '<div id="userComp">';
         for($i = 0; $i < sizeof($userComp); $i++){
-          echo '<h3>'. $userComp[$i] .'</h3>';
+          if($userComp[$i] != ""){
+            echo '<h2>'. ($i+1) . ') ' . $userComp[$i] .'</h2>';
+          }
         }
         echo '</div>';
+        echo '</div>'
       
       ?>
     

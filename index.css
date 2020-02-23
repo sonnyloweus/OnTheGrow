@@ -848,7 +848,7 @@ body{
     transition: 1s;
 }
 
-/* ############################################### My Forest #########################################*/
+/* ########################## My Forest ########################*/
 #myForestPage{
     position: relative;
     top: 0;
@@ -865,6 +865,13 @@ body{
     opacity: 0;
 }
 
+#myForestTitle{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    transform: translate(-65%, -70%);
+}
+
 #homeButton3{
     color: rgb(131, 128, 128);
     background: none;
@@ -877,7 +884,8 @@ body{
     position: relative;
     top: 0;
     left: 0;
-    line-height: 5px;;
+    line-height: 5px;
+    z-index: 7;
 }
 
 #homeButton3:hover{
@@ -894,6 +902,30 @@ body{
 #userComp {
     position: absolute;
     left: 45%;
-    top: 45%;
-    transform: translate(-65%);
+    top: 40%;
+    transform: translate(-60%);
+}
+
+#competition{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    transform: translate(-55%);
+    background-color: #05775e;
+    width: 25vw;
+    height: 40vh;
+    padding: 15px;
+}
+
+#user hr{
+    width: 100vw;
+}
+
+#myTree{
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0vh;
+    width: 80vw;
+    height: 100vh;
 }
