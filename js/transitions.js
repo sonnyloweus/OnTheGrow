@@ -254,3 +254,25 @@ homeButton2.onclick = function(){
     location.reload();
     console.log("hi");
 }
+
+//######################### Create Competition ##################
+let competitionName = document.getElementById("leaderBoardButton");
+let peopleCompetition = document.getElementById("leaderboard");
+let addingSubmit = document.getElementById("addingSubmit");
+
+let adding = document.getElementById("adding");
+let created = document.getElementById("created");
+let anotherOne = document.getElementById("anotherOne");
+
+function createCompetition(){
+    adding.style.display = "none";
+    created.style.display="block";
+    anotherOne.style.display="block";
+    setTimeout(function(){window.location = window.location.href + '&created=true';}, 1000);
+}
+
+anotherOne.onclick = function(){
+    adding.style.display = "block";
+    created.style.display="none";
+    anotherOne.style.display="none";
+}

@@ -543,7 +543,7 @@ body{
     top: 30%;
     transform: translate(-70%, -70%);
     width: 18vw;
-    height: 16vw;
+    height: 11vw;
 }
 
 #carpool, #carpoolIcon{
@@ -576,7 +576,7 @@ body{
 @media only screen and (orientation: landscape){
     #bus, #busIcon{
         width: 18vh;
-        height: 16vh;
+        height: 11vh;
     }
     
     #carpool, #carpoolIcon{
@@ -762,4 +762,88 @@ body{
     width: 20vw;
     height: 100vh;
     background-color: #056e57;
+}
+
+
+#adding {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transform: translate(-70, -70%);
+    text-align: center;
+}
+
+#adding label{
+    font-size: 20px;
+}
+
+#adding input{
+    margin: 7px;
+    resize: vertical;
+    height: 6vh;
+    resize: horizontal;
+    width: 30vh;
+    border: 1px solid #05775e;
+    padding-left: 9px;
+    margin: 10px;
+}
+
+#addingSubmit{
+    color: white;
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 12.5vw;
+    height: 5.2vw;
+    font-size: 2vw;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    transition: 1s;
+}
+
+#addingSubmit:hover{
+    background-color: #05775e;
+    border: 1px solid #06b690;
+    transition: 1s;
+}
+
+#LeaderBoards {
+    position: absolute;
+    left: 45%;
+    transform: translate(-55%);
+}
+
+#created{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    color: white;
+    transform: translate(-55%, -50%);
+    display: none;
+}
+
+#anotherOne{
+    color: white;
+    background-color: #14d6ac;
+    border: 2px solid #14d6ac;
+    border-radius: 15px;
+    width: 12.5vw;
+    height: 5.2vw;
+    font-size: 2vw;
+    transition: 1s;
+    position: absolute;
+    left: 45%;
+    top: 60%;
+    transform: translate(-55%);
+    transition: 1s;
+    display: none;
+}
+
+#anotherOne:hover{
+    background-color: #05775e;
+    border: 1px solid #06b690;
+    transition: 1s;
 }

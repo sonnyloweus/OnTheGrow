@@ -24,7 +24,7 @@ for username in mycursor.fetchall():
   users.append(username[0].lower().replace(" ", "_"))
 
 #CREATES COMPETITIONS TABLE
-mycursor.execute('CREATE TABLE competitions(competition, city, type)')
+mycursor.execute('CREATE TABLE competitions(competition, city, )')
 
 #CREATES ALL CITY COMPETITIONS - NEEDS TO BE RUN ONLY ONCE!!!!
 for city in cities:

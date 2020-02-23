@@ -150,6 +150,15 @@
                     echo "Error updating record: " . mysqli_error($conn);
                 }
             }
+            if(isset($_GET['created'])){
+                include('templates/connect_db.php');
+                $sql = "UPDATE members SET competition1='' WHERE username='$username'";
+                
+                if (mysqli_query($conn, $sql)) {
+                } else {
+                }
+            }
+
             include('templates/connect_db.php');
             $sql = "SELECT * FROM members WHERE username = '$username'";
             //make query + result
@@ -178,7 +187,6 @@
 
     <script>
         let loggedIn = "<?php echo "$loggedIn"?>";
-        
     </script>
 
     <script src="js/index.js"></script>
