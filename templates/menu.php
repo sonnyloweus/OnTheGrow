@@ -1,8 +1,4 @@
-<?php 
-    if (isset($_GET['leaderboard'])) {
-        $python = `index.py`;
-        echo $python; 
-    }
+<?php
 ?>
 
 <div class="menu">
@@ -57,11 +53,18 @@
                 <span>O</span>
                 <span>X</span>
             </div>
-        <form method="get">
-            <input type="submit" name="leaderboard" value="" id="leaderBoardButton"></input>
-            <img id="leaderboardIcon" src="images/leaderboardIcon.png">
 
-            <input type="submit" name="MyTree" value="" id="treeIconButton"></input>
-            <img id="treeIcon" src="images/treeIcon.png">
-        </form>
+        <button id="leaderBoardButton"></button>
+        <img id="leaderboardIcon" src="images/leaderboardIcon.png">
+
+        <button id="treeIconButton"></button>
+        <img id="treeIcon" src="images/treeIcon.png">
     </div>
+
+    <script>
+        let leaderBoardButton = document.getElementById("leaderBoardButton")''
+        leaderBoardButton.onclick(){
+            let pythonCode = "<?php $python = `index.py`; echo $python; ?>
+            console.log(pythonCode);
+        }
+    </script>

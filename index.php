@@ -60,6 +60,9 @@
         }
         //free memery of result
         mysqli_free_result($result);
+        
+        $spl = "UPDATE members SET points='10' WHERE username = '$username'";
+        mysqli_query($conn, $sql);
     }
 
 
@@ -101,6 +104,16 @@
     <?php include('templates/home.php') ?>
 
     <?php include('templates/goingGreen.php') ?>
+
+    <?php 
+        if(!$loggedIn){
+            $points = 0;
+        }else{
+            $points = $member['points']; 
+        }
+    ?> 
+
+    <h5> Points: <?php echo $points ?> </h5>
     
     <!-- ##################### python ################ -->
     <?php 
@@ -113,9 +126,11 @@
     <?php include('templates/footer.php') ?>
     
     <!-- ##################### Js ################ -->
-    <script type="text/javascript">
-        let loggedIn = "<?php echo "$loggedIn"?>"
+
+    <script>
+        let loggedIn = "<?php echo "$loggedIn"?>";
     </script>
+
     <script src="js/index.js"></script>
     <script src="js/transitions.js"></script>
 </html>

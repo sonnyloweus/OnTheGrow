@@ -6,7 +6,7 @@ let home = document.getElementById("home");
 
 //#################### Back Button ####################
 let homeButton = document.getElementById("homeButton");
-homeButton.onclick = function(){
+homeButton.onclick = function(){ 
     if(currentAbout){
         aboutUs.style.display = "none";
         currentAbout = false;
@@ -19,7 +19,15 @@ homeButton.onclick = function(){
         }
         currentLogin = false;
     }
+    if(currentGreen){
+        goingGreenPage.style.display = "none";
+        currentGreen = false;
+    }
     home.style.display = "block";
+    activityButtons.style.display = "block";
+    submitForm.style.display = "none";
+    homeButton.style.visibility = "hidden";
+    homeButton.style.opacity = "0";
 }
 
 //#################### Login Page ######################
@@ -99,3 +107,65 @@ goingGreenButton.onclick = function(){
     homeButton.style.visibility = "visible";
     homeButton.style.opacity = "1";   
 }
+
+//#################### Home Page ####################
+
+let activityButtons = document.getElementById("activityButtons");
+let carpoolButton = document.getElementById("carpool");
+let busButton = document.getElementById("bus");
+let bikeButton = document.getElementById("bike");
+let trainButton = document.getElementById("train");
+let activityType = document.getElementById("activityType");
+let submitForm = document.getElementById("submitForm");
+let homeForm = document.getElementById("homeForm");
+
+//homeForm.action = window.location.href;
+
+carpoolButton.onclick = function(){
+    activityButtons.style.display = "none";
+    submitForm.style.display = "block";
+    activityType.innerHTML = "Carpool";
+    homeButton.style.visibility = "visible";
+    homeButton.style.opacity = "1";  
+}
+busButton.onclick = function(){
+    activityButtons.style.display = "none";
+    submitForm.style.display = "block";
+    activityType.innerHTML = "Bus";
+    homeButton.style.visibility = "visible";
+    homeButton.style.opacity = "1";  
+}
+trainButton.onclick = function(){
+    activityButtons.style.display = "none";
+    submitForm.style.display = "block";
+    activityType.innerHTML = "Train";
+    homeButton.style.visibility = "visible";
+    homeButton.style.opacity = "1";  
+}
+bikeButton.onclick = function(){
+    activityButtons.style.display = "none";
+    submitForm.style.display = "block";
+    activityType.innerHTML = "Bike";
+    homeButton.style.visibility = "visible";
+    homeButton.style.opacity = "1";  
+}
+
+let submitButton = document.getElementById("accountabilitySubmit");
+let accountability = document.getElementById("accountability");
+let userImage = document.getElementById("userImage");
+
+submitButton.onclick = function(){
+    let image = accountability.value;
+    console.log(image);
+    userImage.src = image;
+}
+
+//#################### Leaderboard Page ####################
+let leaderBoardButton = document.getElementById("leaderBoardButton");
+let leaderboard = document.getElementById("leaderboard")
+
+leaderBoardButton.onclick = function(){
+    leaderboard.style.display = "block";
+}
+
+    
