@@ -31,38 +31,39 @@
     <div id="myCompetitions" style="display: none;">
 
       <?php 
-        $titleComp = "";
-        $userComp = array("","","","","");
+        if($loggedIn)
+          $titleComp = "";
+          $userComp = array("","","","","");
 
-        $counter1 = 0;
-        $counter2 = 0;
-        $indextitle = 0; 
-        for($i = 0; $i < strlen($python); $i++){
-          if($python[$i] == ":"){
-            $counter1++;
-          }
-          if($counter1 == 1){
-            if($python[$i] == ","){
-              $counter2++;
-            }else if($python[$i] != ":"){
-              $userComp[$counter2] = $userComp[$counter2] . $python[$i];
+          $counter1 = 0;
+          $counter2 = 0;
+          $indextitle = 0; 
+          for($i = 0; $i < strlen($python); $i++){
+            if($python[$i] == ":"){
+              $counter1++;
             }
-          }else if($counter1 != 1){
-            $titleComp = $titleComp . $python[$i];
+            if($counter1 == 1){
+              if($python[$i] == ","){
+                $counter2++;
+              }else if($python[$i] != ":"){
+                $userComp[$counter2] = $userComp[$counter2] . $python[$i];
+              }
+            }else if($counter1 != 1){
+              $titleComp = $titleComp . $python[$i];
+            }
+            
           }
-          
-        }
 
-        echo '<div id="competition">';
-        echo '<h1 id="titleComp">'. $titleComp .'</h1>';
-        echo '<div id="userComp">';
-        for($i = 0; $i < sizeof($userComp); $i++){
-          if($userComp[$i] != ""){
-            echo '<h2>'. ($i+1) . ') ' . $userComp[$i] .'</h2>';
+          echo '<div id="competition">';
+          echo '<h1 id="titleComp">'. strtoupper($titleComp) .'</h1>';
+          echo '<div id="userComp">';
+          for($i = 0; $i < sizeof($userComp); $i++){
+            if($userComp[$i] != ""){
+              echo '<h2>'. ($i+1) . ') ' . strtoupper($userComp[$i]) .'</h2>';
+            }
           }
-        }
-        echo '</div>';
-        echo '</div>'
+          echo '</div>';
+          echo '</div>'
       
       ?>
     

@@ -44,6 +44,7 @@
     <button id="homeButton3" class="homeButton3">🏡</button>
 
     <h1  id="MyForestTitle" >My Tree</h1>
+    <h3 id="score"> Points: <?php echo $userPointCount ?> </h3> 
 
     <img id="myTree" src="">
 

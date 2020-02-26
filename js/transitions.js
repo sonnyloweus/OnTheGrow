@@ -234,7 +234,7 @@ function verifyButton(type){
     verificationSent.style.display = "block";
     forms.reset();
     let activity = type;
-    setTimeout(function(){window.location = window.location.href + '&verify=' + activity;}, 1000);
+    setTimeout(function(){window.location = window.location.href + '&verify=verified';}, 1000);
 }
 
 // #################### Leaderboard Page ####################

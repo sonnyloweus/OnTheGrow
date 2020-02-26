@@ -872,6 +872,13 @@ body{
     transform: translate(-65%, -70%);
 }
 
+#score{
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    transform: translate(-65%, -75%);
+}
+
 #homeButton3{
     color: rgb(131, 128, 128);
     background: none;
@@ -895,25 +902,25 @@ body{
 #titleComp {
     position: absolute;
     top: 30%;
-    left: 45%;
-    transform: translate(-65%, -70%);
+    left: 50%;
+    transform: translate(-50%, -70%);
 }
 
 #userComp {
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: 40%;
-    transform: translate(-60%);
+    transform: translate(-50%);
 }
 
 #competition{
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 25%;
     transform: translate(-55%);
     background-color: #05775e;
     width: 25vw;
-    height: 40vh;
+    height: 62vh;
     padding: 15px;
 }
 
