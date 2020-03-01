@@ -12,8 +12,8 @@
           break;
       }
   }
-  $index = $index-26;
-  $theName = substr($theHREF, 26, $index);
+  $index = $index-31;
+  $theName = substr($theHREF, 31, $index);
 
   $doneName = "";
 
@@ -24,6 +24,7 @@
           $doneName = $doneName . $theName[$i];
       }
   }
+
   include('templates/connect_db.php');
 
   $sql = "SELECT * FROM members WHERE username = '$doneName'";
@@ -31,6 +32,7 @@
   $result = mysqli_query($conn, $sql);
   //fetch array from result
   $member = mysqli_fetch_assoc($result);
+  $userPointCount = 0;
   if($member){
     $userPointCount = $member['points'];
   }
